@@ -8,6 +8,8 @@ class PostShowController extends Controller
 {
     public function __invoke(Post $post)
     {
-        dd($post);
+        return view('posts.show', [
+            'post' => $post,
+        ]);
     }
 }
