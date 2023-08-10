@@ -10,9 +10,7 @@
                         </a>
                     </h1>
                     <div>{{ $post->teaser }}</div>
-                    <div class="text-sm mt-10">
-                        {{ $post->author }} / {{ $post->date->toDateString() }}
-                    </div>
+                    <x-post-meta :post="$post" />
                 </article>
             @endforeach
         @else
